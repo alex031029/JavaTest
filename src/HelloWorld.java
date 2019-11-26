@@ -1,25 +1,11 @@
 public class HelloWorld {
-    String x;
-    public HelloWorld(String input)
-    {
-        System.out.println("new object created with input = "+input);
-        x = input;
-    }
-    public void setX(String input)
-    {
-        x = input;
-    }
-    public String getX()
-    {
-        return x;
-    }
     public static void main(String[] args)
     {
-        HelloWorld myWorld = new HelloWorld("haha");
+        Foo myFoo = new Foo("haha");
         if(args.length>0)
         {
-            myWorld.setX(args[0]);
-            System.out.println(myWorld.getX());
+            myFoo.setName(args[0]);
+            System.out.println(myFoo.getName());
         }
         else
         {

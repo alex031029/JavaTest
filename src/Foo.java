@@ -1,8 +1,9 @@
-public class foo {
-    string name;
-    public foo (String input) {
+public class Foo {
+    String name;
+    public Foo (String input) {
+        System.out.println("A new foo is created!");
         if (input == "") {
-            name = "nil"
+            name = "nil";
         }
         else {
             name = input;
@@ -12,6 +13,6 @@ public class foo {
         this.name = name;
     }
     public String getName () {
-        return name
+        return name;
     }
 }
