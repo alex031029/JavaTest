@@ -8,8 +8,8 @@
 2. The `main` function must be static.
     * Otherwise the compiler will raise an error. 
     * To be specific, the main function must be 
-        * static
         * public
+        * static
         * void
     * The `args[0]` of main function is simply the first argument, rather than the file name or path, which is different from C++.
 
@@ -20,3 +20,6 @@
         2. setXXX()
     * It works basically like other C++ class when modifying private variables.
     
+4. Comparison of two `String` variables using `==` or `equals`?
+    * `==` compares two Strings' object references (like comparing two pointers in C++). 
+    * `equals` compares the contents of the Strings.
