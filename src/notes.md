@@ -9,4 +9,9 @@
     * Otherwise the compiler will raise an error. 
 
 3. The static function cannot modify or assign non-static variables
-    * 
+    * Like the main function cannot assign a variable directly, unless the variable is also static.
+    * We can construct two functions to circumvent this issue.
+        1. getXXX()
+        2. setXXX()
+    * It works basically like other C++ class when modifying private variables.
+    
