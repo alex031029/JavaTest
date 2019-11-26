@@ -1,8 +1,8 @@
 public class Foo {
-    String name;
+    private String name;
     public Foo (String input) {
         System.out.println("A new foo is created!");
-        if (input == "") {
+        if (input.equals("")) {
             name = "nil";
         }
         else {
