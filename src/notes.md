@@ -1,12 +1,17 @@
 # Some Notes When Learning JAVA
 
-1. **String** is capitalized while **int** is not.
+1. `String` is capitalized while `int` is not.
     * It is because String is a class.
     * While int, boolean etc. are primitive type
     * https://blog.csdn.net/xionghuimin/article/details/95453181
 
-2. The *main* function must be static.
+2. The `main` function must be static.
     * Otherwise the compiler will raise an error. 
+    * To be specific, the main function must be 
+        * static
+        * public
+        * void
+    * The `args[0]` of main function is simply the first argument, rather than the file name or path, which is different from C++.
 
 3. The static function cannot modify or assign non-static variables
     * Like the main function cannot assign a variable directly, unless the variable is also static.
