@@ -21,5 +21,6 @@
     * It works basically like other C++ class when modifying private variables.
     
 4. Comparison of two `String` variables using `==` or `equals`?
-    * `==` compares two Strings' object references (like comparing two pointers in C++). 
+    * `==` compares two Strings' object references. 
     * `equals` compares the contents of the Strings.
+    * It looks like comparing strings of `char *` in C, using either the pointer or `strcmp()`.
