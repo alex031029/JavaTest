@@ -24,3 +24,9 @@
     * `==` compares two Strings' object references. 
     * `equals` compares the contents of the Strings.
     * It looks like comparing strings of `char *` in C, using either the pointer or `strcmp()`.
+    
+5. `java.lang` defines basic types and classes like `Byte` and `String`.
+    * We can call constants like `Byte.SIZE` to check the detailed configurations.
+    
+6. Modifiers:
+    * `final`: used for variables. It cannot changed once it is assigned for the first time. 
