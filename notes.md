@@ -29,7 +29,8 @@
     * We can call constants like `Byte.SIZE` to check the detailed configurations.
     
 6. Modifiers:
-    * `final`: used for variables. 
-        * It cannot changed once it is assigned for the first time. 
-        * It does not required to be initialized when it is declared.
+    * `final`: used for variables, method and class. 
+        * final variables cannot changed once it is assigned for the first time. 
+        * A final variable does not required to be initialized when it is declared.
+        * final method cannot be overridden, final class cannot be extended.
     
