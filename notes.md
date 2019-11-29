@@ -29,4 +29,7 @@
     * We can call constants like `Byte.SIZE` to check the detailed configurations.
     
 6. Modifiers:
-    * `final`: used for variables. It cannot changed once it is assigned for the first time. 
+    * `final`: used for variables. 
+        * It cannot changed once it is assigned for the first time. 
+        * It does not required to be initialized when it is declared.
+    
