@@ -1,5 +1,3 @@
-# Java Test
+# Test Repository
 
-I am a beginner of Java language. This repo contains a mess of beginner level code I wrote in Java.
-
-
+Some test code and memos are stored here. 
