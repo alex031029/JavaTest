@@ -22,4 +22,4 @@
 		* some pattern appears in different regions
 		* subsampling the pixels does not change the object
 	* convolution layer and max pooling layer
-	*
+	* less parameters!
