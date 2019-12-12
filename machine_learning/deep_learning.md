@@ -22,4 +22,5 @@
 		* some pattern appears in different regions
 		* subsampling the pixels does not change the object
 	* convolution layer and max pooling layer
+		* max pooling is not compulsory, and it can be changed to other pooling function
 	* less parameters!
