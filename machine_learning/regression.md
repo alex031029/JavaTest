@@ -36,4 +36,7 @@
 6. Stochastic Gradient Descent
 	* only consider one example for each iteration. 
 	* it is faster
-.
+
+
+7. Logistic Regression
+	* use sigmoid function 
