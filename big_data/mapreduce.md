@@ -13,3 +13,19 @@
 # Spark
 
 1. Based on memory computation (faster than MapReduce)
+2. Many nodes are virtual nodes, which can be within a same machine
+3. Many operations can be used as memory, and many operations can be omitted.
+4. In comparision, MapReduce has very strict computing methodology.
+
+# Hive
+1. Data warehouse
+
+# YARN
+
+1. resource manager
+2. node manager
+3. application master
+
+# Redis
+1. A kind of NoSql (key-value database)
+2. KV + cache + persistence
