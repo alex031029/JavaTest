@@ -29,3 +29,10 @@
 # Redis
 1. A kind of NoSql (key-value database)
 2. KV + cache + persistence
+
+# Kafka
+1. A distributed message queue, or stream processing platform
+2. High robust, redundance, async communication 
+3. producer: send out message
+4. consumer: receive message
+5. depend on **zookeeper** to store meta info
