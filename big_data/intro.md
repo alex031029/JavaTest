@@ -1,3 +1,8 @@
+# CAP
+1. consistency
+2. availability 
+3. tolerance to network partitions
+
 # Mapreduce
 
 1. Input, split, map, shuffle, reduce, finalize
