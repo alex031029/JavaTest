@@ -7,6 +7,10 @@ class Rock
 	{
 		System.out.println("Rock: ");
 	}
+	Rock(int i)
+	{
+		System.out.printf("Rock: %d\n",i);
+	}
 }
 
 public class SimpleConstructor
@@ -15,7 +19,7 @@ public class SimpleConstructor
 	{
 		for(int i=0;i<10;i++)
 		{
-			new Rock();
+			new Rock(i);
 		}
 	}
 }
