@@ -1,0 +1,12 @@
+/bin
+**/bin
+**/obj/x64/Debug
+**/obj/Debug
+/obj
+obj
+.vs
+/sln
+*.sln
+*~
+*.swp
+*.swo
