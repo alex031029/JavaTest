@@ -4,9 +4,15 @@
 **/obj/Debug
 /obj
 obj
+/.vs
 .vs
 /sln
 *.sln
 *~
 *.swp
 *.swo
+*.Cache
+*.jar
+*.class
+*.user
+*.log
