@@ -25,3 +25,8 @@ Fields are members of their containing type.
         private string firstName;
         // remaining implementation removed from listing
     }
+    
+# Indexers (检索器)
+
+感觉有点像C++里的重载[]操作符。
+从而可以对一个class进行[]操作，就好像一个数组一样。
