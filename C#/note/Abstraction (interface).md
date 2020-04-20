@@ -15,6 +15,7 @@ C++里的的纯虚函数就是一中abstract class。
 An interface is a completely "**abstract class**", which can only contain abstract methods and properties (with empty bodies):
 
 Example：
+
     // Interface
     interface IAnimal 
     {
