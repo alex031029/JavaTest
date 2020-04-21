@@ -14,6 +14,8 @@ Fields are members of their containing type.
 
 这种方法类似于C++里面的，为一个私有变量专门设置返回值与修改的共有函数。
 
+https://stackoverflow.com/questions/6001917/what-are-automatic-properties-in-c-sharp-and-what-is-their-purpose
+
 例子：
 
     public class Person
