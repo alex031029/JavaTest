@@ -15,6 +15,8 @@ using使用的对象必须实现IDisposable接口。
 
 *IDisposable Interface*: Provides a mechanism for releasing unmanaged resources.
 
+在我看来这个相当于一个弱化版的RAII实现。
+
 ## suing directive
 
 就是命名空间那套，导入其他命名空间中定义的类型。
