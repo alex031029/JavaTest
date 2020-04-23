@@ -6,5 +6,5 @@
 
 2. constexpr
 
-`const`并未区分出编译期常量和运行期常量
-`constexpr`限定在了编译期常量
+* `const`并未区分出编译期常量和运行期常量
+* `constexpr`限定在了编译期常量
