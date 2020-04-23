@@ -3,3 +3,8 @@
 	* TreeMap: it can store the records in order of key (default: ascending). When using a iterator to tranvers a TreeMap, the returned result is ordered. Not key can be NULL.
 	* HashTable: similar to HashMap. Both key and value cannot be NULL. It supports synchronization of multithreads. In other word, only one thread can write a HashTable at a given time.
 	* LinkedHashMap: Record the order of inputs. 
+
+2. constexpr
+
+`const`并未区分出编译期常量和运行期常量
+`constexpr`限定在了编译期常量
