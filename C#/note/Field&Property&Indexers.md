@@ -16,6 +16,14 @@ Fields are members of their containing type.
 
 https://stackoverflow.com/questions/6001917/what-are-automatic-properties-in-c-sharp-and-what-is-their-purpose
 
+Property在各种C#文档中非常常见，比如[Generic.Stack](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.stack-1?view=netcore-3.1)里的`Count`就是Stack的一个property。
+
+调用的时候并不需要括号，只需要
+
+    Stack<int> s = new Stack<int>();
+    // some operations
+    Console.WriteLine(s.Count);     // no parentheses are needed
+
 例子：
 
     public class Person
