@@ -9,4 +9,4 @@
 * private: 属于private protected的一个子集
 * private protected: 访问限于包含类或派生自当前程序集中包含类的类型
 
-**Assembly**: 程序集，形式上是*.exe*或者*.dll*文件。
+**Assembly**: 程序集，形式上是 *.exe*或者 *.dll*文件。
