@@ -28,7 +28,7 @@ namespace PoolCreation
         // internal is to make sure that the class CreatePoolAsync is feasible only in this exe file
         // static is to invoke methods in CreatePoolAync without newing an objet
         // 
-       
+
         internal static async Task CreatePoolAsync(string poolName)
         {
             var batchClient = MyCreateBatchClient();
@@ -158,7 +158,10 @@ namespace PoolCreation
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
+
             Console.WriteLine("Hello World!");
+            var batchClient = MyCreateBatchClient();
+            Console.WriteLine(batchClient.CustomBehaviors);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
