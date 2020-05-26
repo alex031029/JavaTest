@@ -91,6 +91,7 @@ namespace PoolCreation
 
         internal static async Task CreateJobAsync(string poolName, string jobName, string subNetId) // TODO add vnet subnet lock info
         {
+            var batchClient = MyCreateBatchClient();
             try
             {
                 PoolInformation pool = new PoolInformation() { PoolId = poolName };
@@ -125,6 +126,10 @@ namespace PoolCreation
         {
             try
             {
+                var batchClient = MyCreateBatchClient();
+                // set it!
+                string poolName = "d2pool-int2-a";
+                PoolInformation pool = new PoolInformation() { PoolId = poolName };
                 var job = await batchClient.JobOperations.GetJobAsync(jobName).ConfigureAwait(false);
                 var task = new CloudTask(taskName, "cmd /c powershell.exe .\\Validate-Basic.ps1"); ///c powershell.exe .\\Validate-Basic.ps1
                 task.UserIdentity = new UserIdentity(new AutoUserSpecification(elevationLevel: ElevationLevel.Admin));
