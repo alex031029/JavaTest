@@ -15,17 +15,23 @@ namespace PoolCreation
 {
     class Program
     {
-        // internal is to make sure that the class CreatePoolAsync is feasible only in this exe file
-        // static is to invoke methods in CreatePoolAync without newing an objet
-        // 
-
-        internal static async Task CreatePoolAsync(string poolName)
+        public static BatchClient MyCreateBatchClient()
         {
             string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
             string batchAccountName = "adlascopeprivate1";
-            string batchKeyvalue = "v6MyW/EyIwJkK6Vhky1/Hi/f1oqJtUCgmpqQxZ+PseBFmrfG1IJyWu6u7vLBYVrdMeuBAwxl8gc1iKGYkfVxtQ==";
+            // paste it when using it :)
+            string batchKeyvalue = "";
             BatchSharedKeyCredentials sharedKeyCredentials = new BatchSharedKeyCredentials(batchAccountUrl, batchAccountName, batchKeyvalue);
             BatchClient batchClient = BatchClient.Open(sharedKeyCredentials);
+            return batchClient;
+        }
+        // internal is to make sure that the class CreatePoolAsync is feasible only in this exe file
+        // static is to invoke methods in CreatePoolAync without newing an objet
+        // 
+       
+        internal static async Task CreatePoolAsync(string poolName)
+        {
+            var batchClient = MyCreateBatchClient();
             try
             {
                 // ImageReference and VirtualMachineConfiguration is uder Microsoft.Azure.Batch namespace
