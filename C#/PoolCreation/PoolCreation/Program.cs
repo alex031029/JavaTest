@@ -20,7 +20,7 @@ namespace PoolCreation
             string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
             string batchAccountName = "adlascopeprivate1";
             // paste it when using it :)
-            string batchKeyvalue = "";
+            string batchKeyvalue = "v6MyW/EyIwJkK6Vhky1/Hi/f1oqJtUCgmpqQxZ+PseBFmrfG1IJyWu6u7vLBYVrdMeuBAwxl8gc1iKGYkfVxtQ==";
             BatchSharedKeyCredentials sharedKeyCredentials = new BatchSharedKeyCredentials(batchAccountUrl, batchAccountName, batchKeyvalue);
             BatchClient batchClient = BatchClient.Open(sharedKeyCredentials);
             return batchClient;
@@ -153,17 +153,31 @@ namespace PoolCreation
             }
         }
 
+        internal static async Task TestAsync()
+        {
+            await Task.Run(() =>
+            {
+                Console.WriteLine("TestASync");
+            });
+            Console.WriteLine("TestSync");
+            return;
+        }
 
-        static void Main(string[] args)
+        // async Task Main is supported after C# 7.1
+        // VS 2017 would raise an error if we do not modify csproj file
+        static async Task Main(string[] args)
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-
+            
             Console.WriteLine("Hello World!");
-            var batchClient = MyCreateBatchClient();
-            Console.WriteLine(batchClient.CustomBehaviors);
+            // var batchClient = MyCreateBatchClient();
+            // Console.WriteLine(batchClient.CustomBehaviors);
+            //string poolName = "d2pool-int2-a";
+            //var task = CreatePoolAsync(poolName);
+            await TestAsync();
+            Console.WriteLine("Good Bye");
             Console.ReadKey();
-
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
     }
