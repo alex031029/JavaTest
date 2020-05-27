@@ -6,8 +6,6 @@
 obj
 /.vs
 .vs
-/sln
-*.sln
 *~
 *.swp
 *.swo
