@@ -20,9 +20,10 @@ namespace PoolCreation
             string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
             string batchAccountName = "adlascopeprivate1";
             // paste it when using it :)
-            string batchKeyvalue = "v6MyW/EyIwJkK6Vhky1/Hi/f1oqJtUCgmpqQxZ+PseBFmrfG1IJyWu6u7vLBYVrdMeuBAwxl8gc1iKGYkfVxtQ==";
+            string batchKeyvalue = "";
             BatchSharedKeyCredentials sharedKeyCredentials = new BatchSharedKeyCredentials(batchAccountUrl, batchAccountName, batchKeyvalue);
             BatchClient batchClient = BatchClient.Open(sharedKeyCredentials);
+            Console.WriteLine("batchClient To String:" + batchClient.ToString());
             return batchClient;
         }
         // internal is to make sure that the class CreatePoolAsync is feasible only in this exe file
@@ -34,7 +35,7 @@ namespace PoolCreation
             var batchClient = MyCreateBatchClient();
             try
             {
-                // ImageReference and VirtualMachineConfiguration is uder Microsoft.Azure.Batch namespace
+                // ImageReference and VirtualMachineConfiguration is under Microsoft.Azure.Batch namespace
                 var imageReference = new ImageReference("WindowsServer", "MicrosoftWindowsServer", "2019-Datacenter-with-Containers", "latest");//17763.1158.2004131759//17763.557.20190604 //17763.973.2001110547//"2019-Datacenter-with-Containers"
                 var vmConfiguration = new VirtualMachineConfiguration(imageReference, "batch.node.windows amd64")
                 {
@@ -66,6 +67,7 @@ namespace PoolCreation
 
                 try
                 {
+                    // ConfigureAwait can be used for preventing from deadlock
                     await pool.CommitAsync().ConfigureAwait(false);
                 }
                 catch (BatchException ex)
@@ -173,9 +175,9 @@ namespace PoolCreation
             Console.WriteLine("Hello World!");
             // var batchClient = MyCreateBatchClient();
             // Console.WriteLine(batchClient.CustomBehaviors);
-            //string poolName = "d2pool-int2-a";
-            //var task = CreatePoolAsync(poolName);
-            await TestAsync();
+            string poolName = "d2pool-int2-a";
+            await CreatePoolAsync(poolName);
+            //await TestAsync();
             Console.WriteLine("Good Bye");
             Console.ReadKey();
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
