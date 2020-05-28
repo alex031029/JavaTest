@@ -15,7 +15,7 @@ namespace PoolCreation
 {
     class Program
     {
-        public static BatchClient MyCreateBatchClient()
+        public static BatchClient MyCreateBatchClientKey()
         {
             string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
             string batchAccountName = "adlascopeprivate1";
@@ -26,13 +26,21 @@ namespace PoolCreation
             Console.WriteLine("batchClient To String:" + batchClient.ToString());
             return batchClient;
         }
+
+        public static BatchClient MyCreateBatchClientToken()
+        {
+            string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
+            string token = "";
+            BatchTokenCredentials tokenCredentials = new BatchTokenCredentials(batchAccountUrl, token);
+            return BatchClient.Open(tokenCredentials);
+        }
         // internal is to make sure that the class CreatePoolAsync is feasible only in this exe file
         // static is to invoke methods in CreatePoolAync without newing an objet
         // 
 
         internal static async Task CreatePoolAsync(string poolName)
         {
-            var batchClient = MyCreateBatchClient();
+            var batchClient = MyCreateBatchClientKey();
             try
             {
                 // ImageReference and VirtualMachineConfiguration is under Microsoft.Azure.Batch namespace
@@ -93,7 +101,7 @@ namespace PoolCreation
 
         internal static async Task CreateJobAsync(string poolName, string jobName, string subNetId) // TODO add vnet subnet lock info
         {
-            var batchClient = MyCreateBatchClient();
+            var batchClient = MyCreateBatchClientKey();
             try
             {
                 PoolInformation pool = new PoolInformation() { PoolId = poolName };
@@ -128,7 +136,7 @@ namespace PoolCreation
         {
             try
             {
-                var batchClient = MyCreateBatchClient();
+                var batchClient = MyCreateBatchClientKey();
                 // set it!
                 string poolName = "d2pool-int2-a";
                 PoolInformation pool = new PoolInformation() { PoolId = poolName };
@@ -173,7 +181,7 @@ namespace PoolCreation
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             
             Console.WriteLine("Hello World!");
-            // var batchClient = MyCreateBatchClient();
+            // var batchClient = MyCreateBatchClientKey();
             // Console.WriteLine(batchClient.CustomBehaviors);
             string poolName = "d2pool-int2-a";
             await CreatePoolAsync(poolName);
