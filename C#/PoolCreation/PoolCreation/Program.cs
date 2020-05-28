@@ -15,13 +15,14 @@ namespace PoolCreation
 {
     class Program
     {
+        // static is required, since they are used in static methods
+        private static string batchAccountUrl = "https://vnetireutest.eastus.batch.azure.com";
+        private static string batchAccountName = "vnetireutest";
         public static BatchClient MyCreateBatchClientKey()
         {
-            string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
-            string batchAccountName = "adlascopeprivate1";
             // paste it when using it :)
-            string batchKeyvalue = "";
-            BatchSharedKeyCredentials sharedKeyCredentials = new BatchSharedKeyCredentials(batchAccountUrl, batchAccountName, batchKeyvalue);
+            string batchKeyValue = "";
+            BatchSharedKeyCredentials sharedKeyCredentials = new BatchSharedKeyCredentials(batchAccountUrl, batchAccountName, batchKeyValue);
             BatchClient batchClient = BatchClient.Open(sharedKeyCredentials);
             Console.WriteLine("batchClient To String:" + batchClient.ToString());
             return batchClient;
@@ -29,7 +30,6 @@ namespace PoolCreation
 
         public static BatchClient MyCreateBatchClientToken()
         {
-            string batchAccountUrl = "https://adlascopeprivate1.westcentralus.batch.azure.com";
             string token = "";
             BatchTokenCredentials tokenCredentials = new BatchTokenCredentials(batchAccountUrl, token);
             return BatchClient.Open(tokenCredentials);
@@ -40,7 +40,7 @@ namespace PoolCreation
 
         internal static async Task CreatePoolAsync(string poolName)
         {
-            var batchClient = MyCreateBatchClientKey();
+            var batchClient = MyCreateBatchClientToken();
             try
             {
                 // ImageReference and VirtualMachineConfiguration is under Microsoft.Azure.Batch namespace
