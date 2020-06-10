@@ -18,6 +18,7 @@ namespace PoolCreation
         // static is required, since they are used in static methods
         private static string batchAccountUrl = "https://vnetireutest.eastus.batch.azure.com";
         private static string batchAccountName = "vnetireutest";
+        private static string subscription = "e934ef50-ed58-41de-84db-5f05bc018751";
         public static BatchClient MyCreateBatchClientKey()
         {
             // paste it when using it :)
