@@ -1,0 +1,16 @@
+/bin
+**/bin
+**/obj/x64/Debug
+**/obj/Debug
+/obj
+obj
+/.vs
+.vs
+*~
+*.swp
+*.swo
+*.Cache
+*.jar
+*.class
+*.user
+*.log
