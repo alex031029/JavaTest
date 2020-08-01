@@ -1,3 +1,4 @@
+// test how \r works in Unix System (macOS)
 #include<stdio.h>
 
 int main()
@@ -5,4 +6,3 @@ int main()
         printf("hahaha\rHello World\n");
         // it prints HelloWorld
 }
-~
