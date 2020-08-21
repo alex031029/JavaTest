@@ -8,10 +8,12 @@ class Rock
 	{
 		System.out.println("Rock: ");
 	}
-	Rock(int i)
+	Rock(int r) 
 	{
-		r = i;
-		System.out.printf("Rock: %d\n",i);
+		// unlike C++, there is no pointer in Java
+		// thus, we can use this.r instead of this->r
+		this.r = r;
+		System.out.printf("Rock: %d\n",this.r);
 	}
 	int getR()
 	{
