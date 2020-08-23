@@ -54,3 +54,7 @@ Drawbacks of microservices：
 理想情况下，我们希望developer能够在完全不了解下hardware infrastructure同时也不接触运维的情况下，部署应用。
 这种就被称为NoOps
 
+## Introducing Container Technologies
+
+### Understanding what containers are 
+
