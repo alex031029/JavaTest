@@ -27,4 +27,30 @@ Traits of Monolithic Apps
 	* 这可以是scale up 或者 scale out
 	* 如果monolithic app中任何一个component不支持scaling，则整个app不支持scaling
 
+#### Splitting apps into microservices
+
 Thus, we are forced to startting splitting complex monolithic applications into smaller independently deployable components called **microservices**
+
+Communication between microservices:
+* Synchronous protocol: HTTP. RESTful APIs
+* Asynchronous protocol: AMQS (Advanced Message Queueing Protocol)
+
+#### Deploying microservices
+
+Drawbacks of microservices：
+* 当component的数量大幅度上升的时候，deployment的决策难度会大幅度上升
+* 同时应对大量的microservices，容易出现错误(error-prone)
+* microservices同时非常难以debug与trace execution calls 
+	* 不过现在有的工具如Zipkin来解决这类问题
+* 会出现不同的microservice的dependency不同的情况。
+
+### Providing a consistent environment to applications
+
+### Moving to continous delivery: DevOps and NoOps
+
+以前大家倾向于区分开发与运维。如今，公司认为开发的人员才是维护这个软件运维的最好的人员。
+于是deloper, QA and operations teams之间高度合作，即DevOps
+
+理想情况下，我们希望developer能够在完全不了解下hardware infrastructure同时也不接触运维的情况下，部署应用。
+这种就被称为NoOps
+
