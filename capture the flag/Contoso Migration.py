@@ -9,4 +9,7 @@ fs = azure.storage.file.fileservice.FileService(
 print("Connected")
 
 fs.list_directories_and_files('secrets', None)  # list files
+fs.list_handles('secrets', None)
+print("!")
+fs.list_shares()
 # fs.get_file_to_path('secrets', None, 'config.txt', 'config')  # download a file
