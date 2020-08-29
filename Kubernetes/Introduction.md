@@ -86,5 +86,6 @@ container isolation的两种机制
 2. Linux Control Groups (cgroups)
 	* limit the amount of resources the process can consume 
 	
-### Linux Namespace
+## Introducing the Docker container platform
 
+Docker是第一个做到让container在不同的机器间轻松移植的平台。
