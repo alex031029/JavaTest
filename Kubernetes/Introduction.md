@@ -60,3 +60,31 @@ Drawbacks of microservices：
 
 Instead of using VM to isolate environment of each microservice (or software process in general), 
 developers are turning to Linux container technologies.
+
+container中的进程与其他的进程一样，是运行在host的操作系统中。
+VM则不相同，不同的进程是运行在不同的操作系统中。
+
+### Compare virtual machines to containers
+
+Containers, compared to VMs, are 
+* more lightweigted
+	* 允许你在同样的配置下，运行更多的进程
+* one container for one application
+	* VM由于额外开销比较多，往往一个VM上会运行更多的进程
+* 使用的system call与host OS的kernel相同，host OS的kernel直接可以调用其CPU执行，而不需要进行virtualization
+	* VM使用的system call是调用guest OS（即VM的OS）中的kernel。然后这些kernel再通过host的CPU执行命令
+
+VM的优势
+* full isolation.因为每个VM都有自己一套完整的Linux kernel。
+	* containers则使用的共同的kernel
+
+### Introducing the mechanism that make container isolation possible
+
+container isolation的两种机制
+1. Linux Namespace
+	* make sure each process sees its own personal view of system
+2. Linux Control Groups (cgroups)
+	* limit the amount of resources the process can consume 
+	
+### Linux Namespace
+
