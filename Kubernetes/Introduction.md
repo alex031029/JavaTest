@@ -58,3 +58,5 @@ Drawbacks of microservices：
 
 ### Understanding what containers are 
 
+Instead of using VM to isolate environment of each microservice (or software process in general), 
+developers are turning to Linux container technologies.
