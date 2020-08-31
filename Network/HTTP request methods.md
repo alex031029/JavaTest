@@ -1,3 +1,31 @@
+# Concepts
+
+## Idempotent
+
+A HTTP method is idepotent is an identical request can be made once or serveral times in a row with the same effectwhile leaving the server in the same state. 
+
+idempotent methods:
+* GET
+* HEAD
+* PUT
+* DELETE
+
+non-idempotent methods
+* POST
+* PATCH
+* CONNECT
+
+All safe methods are also idempotent. 
+
+## Safe
+
+An HTTP method is safe if it does not alter the state of the server. 也就是说，一个对服务器进行只读操作的就是安全的操作。
+
+safe methods:
+* GET
+* HEAD
+* OPTIONS
+
 # Request methods
 
 ## GET
@@ -35,4 +63,5 @@ It converts the request conection to a transparant TCP/IP tunnel.
 
 ## PATCH
 
-It applies partial modifications to a resource
+It applies partial modifications to a resource.
+A PATCH is not necessary idempotent, although it can be. 
