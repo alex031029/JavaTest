@@ -89,3 +89,11 @@ container isolation的两种机制
 ## Introducing the Docker container platform
 
 Docker是第一个做到让container在不同的机器间轻松移植的平台。
+Docker简化了打包的工作。
+Docker会打包app，同时还包括它所有的libraries and dependencies, even the whole OS file system，
+将这些都打包为一个portable package，可以被provision到其他机器运行的Docker上。
+
+当你在Docker里跑一个app的时候，它会看到exact filesystem contents that you've bundled with.
+比如你把app与Red Hat Enterprise Linux （RHEL），那么app就会认为它运行在RHEL上面。
+即使你真正的机器是Fedora或者其他Linux版本。只有kernel会有不同。
+
