@@ -106,4 +106,6 @@ Docker-based container image与VM images之间的一个重大区别在于，cont
 1. **Registries**: docker registry本质是一个repository，里面存有docker image以及一些facilites。
 1. **Containers**： docker-based container即一个从Docker-based container image中创造出来的Linux container。一个container运行商docker上，docker运行在host上。
 
+### Understanding image layers
 
+### Understanding the portability limitation of container images
