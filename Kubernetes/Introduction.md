@@ -97,3 +97,13 @@ Docker会打包app，同时还包括它所有的libraries and dependencies, even
 比如你把app与Red Hat Enterprise Linux （RHEL），那么app就会认为它运行在RHEL上面。
 即使你真正的机器是Fedora或者其他Linux版本。只有kernel会有不同。
 
+Docker-based container image与VM images之间的一个重大区别在于，container image are composed of layers.
+这些layers是被不同的images共享与复用的。
+
+### Understanding Docker concepts
+
+1. **Images**: 一个docker-based image就是你打包你的软件与其运行环境的总和。它包括了filesystem，让app可以寻找路径
+1. **Registries**: docker registry本质是一个repository，里面存有docker image以及一些facilites。
+1. **Containers**： docker-based container即一个从Docker-based container image中创造出来的Linux container。一个container运行商docker上，docker运行在host上。
+
+
