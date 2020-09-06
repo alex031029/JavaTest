@@ -108,4 +108,17 @@ Docker-based container image与VM images之间的一个重大区别在于，cont
 
 ### Understanding image layers
 
+不同的image可以共享完全相同的layer，这使得distribution更快！
+这同时减少了storage footprint。
+
 ### Understanding the portability limitation of container images
+
+理论上container image可以运行在任何Linux docker上面，但这里有个小前提（caveat）：container使用的都是host的kernel。
+如果container需要特别的kernel版本，那么不是所有的机器都晕运行这个container。
+
+这个限制是由container本身的轻量级带来的，VM就没有这个问题。
+因为VM自带kernel。
+
+另外一个限制在于对于hardware architecture的要求。
+一个为X86设计的container无法运行在ARM架构上。
+这个同样需要VM来解决。
