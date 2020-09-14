@@ -122,3 +122,12 @@ Docker-based container image与VM images之间的一个重大区别在于，cont
 另外一个限制在于对于hardware architecture的要求。
 一个为X86设计的container无法运行在ARM架构上。
 这个同样需要VM来解决。
+
+
+## Introducing Kubernetes
+
+### Looking at Kubernetes from the top of a mountain
+
+Kubernetes允许轻松的管理containerized applications。
+
+#### Understanding the core of Kubernetes does
