@@ -13,6 +13,17 @@
 kubernetes会抽象化hardware infrastructure，允许你不了解服务器结构的情况下进行部署。
 所以Kubernetes很适合on-premises的datacenter。
 
+## Summary
+
+* Monolithic apps可以更轻松的部署，但是更难维护，有时候甚至无法scale
+* Microservices-based application architecture使得部署变得轻松，但是作为一个系统，部署与配置变得困难
+* Linux container提供了很多VM也有的好处，同时更加轻量级也有更好的hardware utilization
+* 从Linux container发展过来的Docker提供了更快更好的containerize app provisioning 
+* Kubernetes使得整个datacenter向外展示为一个单独的计算资源
+* 开发者可以在Kubernetes中更简单的部署app，无需sysadmin的帮助
+* sysadmin利用Kubernetes的自动处理故障节点的功能，也能节约时间
+
+
 ## Understanding the Needs for a System like Kubernetes
 
 ### Moving from Monolithic Apps to Microservices
@@ -131,3 +142,55 @@ Docker-based container image与VM images之间的一个重大区别在于，cont
 Kubernetes允许轻松的管理containerized applications。
 
 #### Understanding the core of Kubernetes does
+
+系统包括了
+* a master node 
+* any number of worker nodes 
+
+我们可以把Kubernetes想象成个操作系统的很多cluster。
+这样我们可以做到：
+
+* 帮助开发者的精力集中在软件的feature上
+* 帮助运维提高资源的利用率
+
+### Understanding the architecture of a Kubernetes cluster
+
+前面讲到了，kubernetes包括了主要两种node
+
+* Master Node
+	* which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system
+* Worker Nodes
+	* that run the actual applications that you deploy
+
+#### The Control Plane
+
+**Control Plane**中有很多组成成分，包括
+* Kubernetes API Server
+* Scheduler
+* Controller Manager
+* etcd, a reliable distributed data store that persistently stores the cluster configuration
+
+#### The nodes
+
+Worker nodes上面需要运行、监控并为app提供资源。这些功能通过以下部件实现
+* Docker, rkt or other container runtime
+* The Kuberlet, which talks to the API server and manages containers on its node
+* The Kubernetes Service Proxy (kube-proxy), which load-balances network traffic between application components
+
+### Running an application in Kubernetes
+
+Steps of running apps in Kubernetes:
+1. Package it up into one or more container images
+1. Push these images to an image registry
+1. Post a descrption of your app to Kubernetes API server
+
+**pod**： set of containers. Containers in a pod are not fully isolated.
+
+### Understanding the benefits of using Kubernetes
+
+1. Simplying application deployment
+1. Archieving better utilization of hardware
+1. Health checking and self-healing
+1. Automatic scaling 
+1. Simplying application development
+
