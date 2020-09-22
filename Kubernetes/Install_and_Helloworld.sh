@@ -1,4 +1,4 @@
-# For Kubernetes CentOS Installation
+# Kubernetes CentOS Installation and a Hello World Demonstration
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install docker-ce docker-ce-cli containerd.io
