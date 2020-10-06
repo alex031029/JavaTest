@@ -21,6 +21,6 @@ Explanation:
 	
 ### List running container
 	
-	$docker ps
+	$ docker ps
 
 I personally also use the command `ps -aux|grep docker` to checkt the processes
