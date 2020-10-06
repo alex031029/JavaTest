@@ -15,3 +15,12 @@ Explanation:
 * `--name kubia-container kubia`: a new container named as `kubia-container` from `kubia image`
 * `-p 8080:8080`: Port 8080 of the local machine will be mapped to port 8080 inside the container. Thus, we can access the app through http://localhost:8080
 
+### Access the app
+
+	$ curl localhost:8080
+	
+### List running container
+	
+	$docker ps
+
+I personally also use the command `ps -aux|grep docker` to checkt the processes
