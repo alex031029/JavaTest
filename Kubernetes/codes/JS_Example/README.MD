@@ -24,3 +24,18 @@ Explanation:
 	$ docker ps
 
 I personally also use the command `ps -aux|grep docker` to checkt the processes
+
+
+### Getting additional information about a container
+
+	$ docker inspect kubia-container
+	
+## Exploring the inside of a running container
+
+### Running a shell insides an existing container
+
+	$ docker exec -it kubia-container bash
+	
+Explanation:
+* `-i`, which makes sure STDIN is kept open. You need this to entering command into the shell
+* `-t`, which allocates a pseudo terminal (TTY)
