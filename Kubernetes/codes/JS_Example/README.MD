@@ -30,6 +30,8 @@ I personally also use the command `ps -aux|grep docker` to checkt the processes
 
 	$ docker inspect kubia-container
 	
+The output is in JSON format.
+	
 ## Exploring the inside of a running container
 
 ### Running a shell insides an existing container
@@ -39,3 +41,37 @@ I personally also use the command `ps -aux|grep docker` to checkt the processes
 Explanation:
 * `-i`, which makes sure STDIN is kept open. You need this to entering command into the shell
 * `-t`, which allocates a pseudo terminal (TTY)
+
+
+## Exploring container from within
+
+### List processes from inside a container
+
+	$ ps aux
+
+In the host machine, if we use `ps aux|grep app.js`, we can also find a running process.
+Thus, the process running in the container is running on the host OS.
+
+### The container's filesystem is also isolated
+
+Use the `ls` command, we can easily see an isolated filesystem in the container.
+
+## Stopping and removing the container
+
+### To stop the app
+
+	$ docker stop kubia-container
+	
+This command will
+1. Stop the main process running in the container.
+1. Consequently, the container is stopped.
+
+:warning: be aware of
+1. The container still exists, you may use the command `docker ps -a` to see it 
+	* `-a` option prints all container, including running and stopped container
+
+## To remove the container
+
+	$ docker rm kubia-container
+
+A removed container cannot be started again.
