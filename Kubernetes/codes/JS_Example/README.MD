@@ -66,9 +66,9 @@ This command will
 1. Stop the main process running in the container.
 1. Consequently, the container is stopped.
 
-:warning: be aware of
-1. The container still exists, you may use the command `docker ps -a` to see it 
-	* `-a` option prints all container, including running and stopped container
+:warning: be aware that 
+* The container still exists, you may use the command `docker ps -a` to see it 
+	* `-a` option prints all container, including running and stopped containers
 
 ## To remove the container
 
