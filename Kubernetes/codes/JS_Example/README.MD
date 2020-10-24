@@ -75,3 +75,24 @@ This command will
 	$ docker rm kubia-container
 
 A removed container cannot be started again.
+
+## Pushing the image to an image registry
+
+For the sake of the simplicity, you won't set up a private image registry. 
+Instead we will push the image to [Docker Hub](http://hub.docker.com).
+
+Before that, we need to re-tag the docker. 
+
+### Tagging the image under an addtional tag
+
+	$ docker tag kubia alex031029/kubia
+	
+Here `alex031029` is my ID.
+
+A container image can have multiple tags. 
+This commandline does not rename the tag. 
+Instead, it only add a tag for the same image.
+
+### Pushing the image to Docker Hub
+
+	$ docker push alex031029/kubia
