@@ -4,7 +4,7 @@ const os = require('os');
 console.log("Yanchen Kubia server starting...");
 
 var handler = function(request, response) {
-	console.log("Received request from " + request.connnection.remoteAddress);
+	console.log("Received request from " + request.connection.remoteAddress);
 	response.writeHead(200);
 	response.end("You've hit " + os.hosename() + "\n");
 };
