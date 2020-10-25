@@ -1,5 +1,7 @@
 # Kubernetes
 
-## Objectives
+## Introduction
+
+## First Steps with Docker and Kubernetes
 
 
