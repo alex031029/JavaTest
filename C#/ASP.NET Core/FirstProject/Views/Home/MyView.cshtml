@@ -1,4 +1,5 @@
 ﻿
+@model string
 @{
     ViewData["Title"] = "MyView";
     Layout = null;
@@ -13,6 +14,9 @@
 <body>
     <div>
         Hello World (from the view)
+    </div>
+    <div>
+        @Model World (from the view) 
     </div>
 </body>
 </html>
