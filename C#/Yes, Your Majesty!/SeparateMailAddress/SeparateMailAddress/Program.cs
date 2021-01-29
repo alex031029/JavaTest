@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks.Dataflow;
 
-namespace SeperateMailAddress
+namespace SeparateMailAddress
 {
     class Program
     {
