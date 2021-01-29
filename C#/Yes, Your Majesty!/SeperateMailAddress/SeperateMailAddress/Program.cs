@@ -6,7 +6,9 @@ namespace SeperateMailAddress
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // the exe file is in bin/Debug/netcoreapp3.1/ folder
+            var text = System.IO.File.ReadAllLines(@"../../../test.input");
+            System.Console.WriteLine(text[0]);
         }
     }
 }
