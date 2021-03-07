@@ -33,5 +33,11 @@ namespace PartyInvites.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        // No argument in View(), means Razor will looking for a view called RsvpForm.cshtml
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
     }
 }
