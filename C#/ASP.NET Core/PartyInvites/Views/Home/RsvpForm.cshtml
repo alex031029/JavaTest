@@ -1,6 +1,7 @@
 ﻿@model PartyInvites.Models.GuestResponse
 @{
     Layout = null;
+    ViewData["Title"] = "Rsvp Form";
 }
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@
             <input asp-for="Name" />
         </div>
         <div>
-            <label asp-for="Email">Your email</label>
+            <label asp-for="Email">Your email:</label>
             <input asp-for="Email" />
         </div>
         <div>
