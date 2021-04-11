@@ -5,6 +5,8 @@ using System.Collections.Generic;
 // But it does not hinder from demonstrating how ASP.NEt Core and model binding
 namespace PartyInvites.Models
 {
+    // statisc is for ease of storing and retrieving data
+    // a more sophisticalted approach should be dependency injection
     public static class Repository
     {
         private static List<GuestResponse> responses = new List<GuestResponse>();
