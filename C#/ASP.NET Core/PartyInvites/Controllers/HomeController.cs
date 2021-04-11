@@ -36,8 +36,16 @@ namespace PartyInvites.Controllers
 
         // ViewResult is a subtype of ActionResult
         // No argument in View(), means Razor will looking for a view called RsvpForm.cshtml
+        [HttpGet]
         public ViewResult RsvpForm()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            // TODO: store response from guest
             return View();
         }
     }
