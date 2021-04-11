@@ -34,6 +34,7 @@ namespace PartyInvites.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        // ViewResult is a subtype of ActionResult
         // No argument in View(), means Razor will looking for a view called RsvpForm.cshtml
         public ViewResult RsvpForm()
         {
