@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// This method is only in-memory store the reponse data
+// But it does not hinder from demonstrating how ASP.NEt Core and model binding
 namespace PartyInvites.Models
 {
     public static class Repository
