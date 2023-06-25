@@ -1,0 +1,44 @@
+{
+  "DataStoreSettings": {
+    "AzureStorageInfo": {
+      "AccountName": "[ReplaceMe]",
+      "Key": "[ReplaceMe]",
+      "PartitionKey": "[ReplaceMe]",
+      "Environment": "[ReplaceMe]",
+      "IsUsingCosmosDb": null,
+      "UseAzTablesSDK": false,
+      "CosmosDBResourceID": ""
+    },
+    "MaxBatchSize": 100
+  },
+  "ServerSettings": {
+    "IPAddress": "[ReplaceMe]",
+    "Port": "80",
+    "TlsCertificateSubjectName": "[ReplaceMe]",
+    "TlsCertificateFilePath": "[ReplaceMe]",
+    "KeyVaultName": "",
+    "KeyVaultCertificateName": "",
+    "KeyVaultCertificateRefreshIntervalInHrs": 12,
+    "UseHttps": true,
+    "TlsPort": "443"
+  },
+  "MasterElectionSettings": {
+    "UseDataStore": null,
+    "BlobStorageSettings": {
+      "AccountName": "[ReplaceMe]",
+      "Key": "[ReplaceMe]",
+      "PartitionKey": "[ReplaceMe]",
+      "Environment": "[ReplaceMe]",
+      "BlobName": "[ReplaceMe]",
+      "ContainerName": "[ReplaceMe]",
+      "LeaseIntervalInSecs": 60,
+      "LeaseRenewIntervalInSecs": 30,
+      "AcquireRetryIntervalInSecs": 30
+    },
+    "DataStoreLeaseSettings": {
+      "LeaseIntervalInSecs": 60,
+      "LeaseRenewIntervalInSecs": 30,
+      "AcquireRetryIntervalInSecs": 30
+    }
+  }
+ }
