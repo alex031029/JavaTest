@@ -5,8 +5,8 @@
       "Key": "[ReplaceMe]",
       "PartitionKey": "[ReplaceMe]",
       "Environment": "[ReplaceMe]",
-      "IsUsingCosmosDb": null,
-      "UseAzTablesSDK": false,
+      "IsUsingCosmosDb": "[ReplaceMe]",
+      "UseAzTablesSDK": "[ReplaceMe]",
       "CosmosDBResourceID": ""
     },
     "MaxBatchSize": 100
