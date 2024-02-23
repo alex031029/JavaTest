@@ -23,7 +23,7 @@
     "TlsPort": "443"
   },
   "MasterElectionSettings": {
-    "UseDataStore": null,
+    "UseDataStore": "[ReplaceMe]",
     "BlobStorageSettings": {
       "AccountName": "[ReplaceMe]",
       "Key": "[ReplaceMe]",
