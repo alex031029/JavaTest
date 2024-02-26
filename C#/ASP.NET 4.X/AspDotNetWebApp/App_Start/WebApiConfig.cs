@@ -13,6 +13,7 @@ namespace AspDotNetWebApp
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            config.Filters.Add(new Filter.NotImplExceptionFilterAttribute());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
